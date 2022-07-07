@@ -1,0 +1,122 @@
+** start of inde.html **
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">A Short Survey Form made with HTML and CSS</p>
+    <form id="survey-form">
+      <fieldset>
+        <legend>General Information</legend>
+        <label id="name-label">First Name: <input type="text" id="name" required placeholder="eg. Sam Gatfield"/></label>
+        <label id="email-label">Email: <input type="email" id="email" required placeholder="eg. sgatfield32@gmail.com"/></label>
+        <label id="number-label">Age <input type="number" id="number" required min="16" max="99" placeholder="eg. 16"
+        /></label>
+      </fieldset>
+      <fieldset>
+        <label>Are you currently working?
+          <select name="referrer" id="dropdown">
+              <option value="">(select one)</option>
+              <option value="1">Full-time</option>
+              <option value="2">Part-time</option>
+              <option value="3">Not Working</option>
+          </select>
+        </label>
+        <label>Gender:</label>
+        <label><input type="checkbox" class="inline" value="Male" required />Male</label>
+        <label><input type="checkbox" class="inline" value="Female" required />Female</label>
+        <label><input type="checkbox" class="inline" value="Other" required />Other</label>
+       <label>Favourite Language?</label>
+        <label><input type="radio" name="language-type" value="HTML" class="inline">HTML</label>
+        <label><input type="radio" name="language-type" value="CSS" class="inline"/>CSS</label>
+        <label><input type="radio" name="language-type" value="JS" class="inline"/>JS</label>
+        <label>A short About You:
+          <textarea name="about-you" rows="3" cols="30" placeholder="I like to..."></textarea>
+        <label>
+      </fieldset>
+      <input type="submit" value="Submit" id="submit"/>
+    </form>
+  </body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+body{
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #06BCFF;
+  color: #FFFFFF;
+  font-family: Tahoma;
+  font-size: 16px;
+}
+
+h1,p{
+  margin: 1em auto;
+  text-align: center;
+}
+form{
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+fieldset{
+  /*padding: 2rem 0;*/
+  border-radius: 3%;
+  max-width: 500px;
+  padding: 16px;
+  border: 3px solid #3b3b4f;
+}
+legend{
+  margin-bottom: 0px;
+  margin-left: 16px;
+}
+
+label{
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input,textarea,select{
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+
+input,textarea{
+  background-color: #3b3b4f;
+  border: 1px solid #3b3b4f;
+  color: #FFFFFF;
+}
+
+.inline{
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+input[type="submit"]{
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+  min-width: 300px;
+}
+
+
+
+** end of styles.css **
+
